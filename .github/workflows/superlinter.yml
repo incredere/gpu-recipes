@@ -1,0 +1,17 @@
+name: Super Linter
+
+on:
+  workflow_dispatch:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Super-Linter
+        uses: super-linter/super-linter@v6
+        env:
+          VALIDATE_MARKDOWN: true
+          VALIDATE_ALL_CODEBASE: true
+          DEFAULT_BRANCH: main
