@@ -1,6 +1,10 @@
-name:Quick Link Check
+name: Quick Link Check
+
+
 on:
   workflow_dispatch:
+
+  
 jobs:
   link-check:
     runs-on:ubuntu-latest
