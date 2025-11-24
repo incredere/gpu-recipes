@@ -7,13 +7,14 @@ jobs:
   link-check:
     runs-on: ubuntu-latest
     steps:
-         - uses: actions/checkout@v4
-      
-         - name: Run Lychee Link Checker
-           uses: lycheeverse/lychee-action@v2.1.0
-           with:
-            fail: false
-            args: >
-             --no-progress
-             --verbose
-             "./**/*.md"
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Run Lychee Link Checker
+        uses: lycheeverse/lychee-action@v2.1.0
+        with:
+          fail: false
+          args: >
+            --no-progress
+            --verbose
+            "./**/*.md"
